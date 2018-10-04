@@ -1,0 +1,567 @@
+{% extends 'base.html' %}
+{% block extrahead %}{% endblock %}
+{% block content %}
+
+<div class="jq22-container">
+<div class="flexslider">
+<ul class="slides">
+<li style="background:url(/static/images/banner_01.jpg) 50% 0 no-repeat;"></li>
+<li style="background:url(/static/images/banner_01.jpg) 50% 0 no-repeat;"></li>
+<li style="background:url(/static/images/banner_01.jpg) 50% 0 no-repeat;"></li>
+
+</ul>
+</div>
+</div>
+
+<script type="text/javascript" src="/static/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			$('.flexslider').flexslider({
+				directionNav: true,
+				pauseOnAction: false,
+				slideshowSpeed: 3000
+			});
+		});
+	</script>
+
+
+<link href="/static/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/static/js/jquery.jDiaporama.js"></script>
+<script type="text/javascript" src="/static/js/script.js"></script>
+
+<div class="bank_1">
+ <div class="bank_1_z">
+  <div class="m">
+   <ul class="diaporama1">
+    <li><img src="/static/images/img_01.jpg" width="478" height="403" alt="云南省工业园区协会" title="云南省标题XXXXXX"></li>
+    <li><img src="/static/images/img_01.jpg" width="478" height="403" alt="云南省工业园区协会" title="云南省标题XXXXXX"></li>
+    <li><img src="/static/images/img_01.jpg" width="478" height="403" alt="云南省工业园区协会" title="云南省标题XXXXXX"></li>
+    <li><img src="/static/images/img_01.jpg" width="478" height="403" alt="云南省工业园区协会" title="云南省标题XXXXXX"></li>
+   </ul>
+  </div>
+
+ </div>
+ <div class="bank_1_y">
+  <div class="bank_1_y1">
+   <dl>
+    <dt><span>焦点新闻</span></dt>
+       {% for new in news %}
+           {{ new.name }}
+            <a href="#"><dd>·&nbsp;&nbsp; {{ new.title }} </dd></a>
+       {% endfor %}
+   </dl>
+   <dl>
+    <dt><span>领导调研</span></dt>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+   </dl>
+  </div>
+  <div class="bank_1_y2">
+   <dl class="bank_1_y21">
+   <dt>
+   <ul>
+    <li id="tow11" onClick="setTab('tow1',1,4)" class="hover">政策法规</li>
+    <li id="tow12" onClick="setTab('tow1',2,4)">国际级</li>
+    <li id="tow13" onClick="setTab('tow1',3,4)">省级</li>
+    <li id="tow14" onClick="setTab('tow1',4,4)">州市级</li>
+   </ul>
+   </dt>
+    <div id="con_tow1_1">
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    </div>
+        <div id="con_tow1_2" style="display:none;">
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区2</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    </div>
+        <div id="con_tow1_3" style="display:none;">
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区3</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    </div>
+        <div id="con_tow1_4" style="display:none;">
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区4</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    <a href="#"><dd>·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</dd></a>
+    </div>
+  </dl>
+   <dl class="bank_1_y22">
+    <dt>
+    <ul>
+     <li id="tow21" onClick="setTab('tow2',1,2)" class="hover">通知公告</li>
+     <li id="tow22" onClick="setTab('tow2',2,2)" >协会动态</li>
+    </ul>
+    </dt>
+    <div><a href="#"><img src="/static/images/img_02.jpg"></a><a href="#"><img src="/static/images/img_02.jpg"></a></div>
+    <dd id="con_tow2_1"><a href="#">·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</a>
+     <a href="#">·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</a>
+     <a href="#">·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</a>
+     <a href="#">·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</a>
+     <a href="#">·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</a>
+    </dd>
+    <dd id="con_tow2_2" style="display:none;"><a href="#">·&nbsp;&nbsp;省工22信委工业经济文山马塘工业园区2</a>
+     <a href="#">·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</a>
+     <a href="#">·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</a>
+     <a href="#">·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</a>
+     <a href="#">·&nbsp;&nbsp;省工信委工业经济督查调研组深入文山马塘工业园区</a>
+    </dd>
+
+   </dl>
+  </div>
+ </div>
+</div>
+
+<div class="bank_02">
+ <div class="bank_nn1">
+  <dl>
+   <dt><span>园区动态</span></dt>
+   <dd>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="bank_nn2">
+  <dl>
+   <dt><span>园区交流</span></dt>
+   <div><a href="#"><img src="/static/images/img_03.jpg" width="139" height="98" alt="新闻名称"></a></div>
+   <dd>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="bank_nn3">
+  <dl>
+   <dt><span>经验交流</span></dt>
+   <dd>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+   </dd>
+  </dl>
+ </div>
+</div>
+
+<div class="bank_03">
+ <div class="bank_03_1">
+  <a href="#"><img src="/static/images/an_01.jpg" width="582" height="139" alt="图片名称"></a>
+  <a href="#"><img src="/static/images/an_02.jpg" width="582" height="139" alt="图片名称"></a>
+ </div>
+ <div class="bank_03_2">
+  <div class="bank_03_2_z">
+
+   <div class="roll-wrap roll_col h517" id="d2">
+    <ul class="roll__list" style="position: absolute; left: 0; top: 0;">
+     <a href="#"><li><img src="/static/images/gg_01.jpg" width="338" height="414"></li></a>
+     <a href="#"><li><img src="/static/images/gg_01.jpg" width="338" height="414"></li></a>
+     <a href="#"><li><img src="/static/images/gg_01.jpg" width="338" height="414"></li></a>
+     <a href="#"><li><img src="/static/images/gg_01.jpg" width="338" height="414"></li></a>
+     <a href="#"><li><img src="/static/images/gg_01.jpg" width="338" height="414"></li></a>
+     <a href="#"><li><img src="/static/images/gg_01.jpg" width="338" height="414"></li></a>
+    </ul>
+    <a class="control pre" href="javascript:;" style="top: 180px;">&lt;</a>
+    <a class="control next" href="javascript:;" style="top: 180px;">&gt;</a>
+   </div>
+  </div>
+  <div class="bank_03_2_y">
+   <ul>
+    <a href="#"><li><span><strong>昆明高新技术开发区</strong><i></i><br>关于举办2018年中关村5G创新应用大赛的通知</span><em></em></li></a>
+    <a href="#"><li><span><strong>昆明高新技术开发区</strong><i></i><br>关于举办2018年中关村5G创新应用大赛的通知</span><em></em></li></a>
+    <a href="#"><li><span><strong>昆明高新技术开发区</strong><br>关于举办2018年中关村5G创新应用大赛的通知</span><em></em></li></a>
+    <a href="#"><li><span><strong>昆明高新技术开发区</strong><i></i><br>关于举办2018年中关村5G创新应用大赛的通知</span><em></em></li></a>
+    <a href="#"><li><span><strong>昆明高新技术开发区</strong><br>关于举办2018年中关村5G创新应用大赛的通知</span><em></em></li></a>
+    <a href="#"><li><span><strong>昆明高新技术开发区</strong><br>关于举办2018年中关村5G创新应用大赛的通知</span><em></em></li></a>
+    <a href="#"><li><span><strong>昆明高新技术开发区</strong><i></i><br>关于举办2018年中关村5G创新应用大赛的通知</span><em></em></li></a>
+    <a href="#"><li><span><strong>昆明高新技术开发区</strong><i></i><br>关于举办2018年中关村5G创新应用大赛的通知</span><em></em></li></a>
+
+   </ul>
+  </div>
+ </div>
+</div>
+
+<div class="bank_04">
+ <div class="bank_04_1">
+  <dl>
+   <dt><span>投融资</span></dt>
+   <dd>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="bank_04_2">
+  <dl>
+   <dt><span>产业聚焦</span></dt>
+   <dd>
+    <a href="#"><span>·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</span><em>2018-04-08</em></a>
+    <a href="#"><span>·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</span><em>2018-04-08</em></a>
+    <a href="#"><span>·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</span><em>2018-04-08</em></a>
+    <a href="#"><span>·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</span><em>2018-04-08</em></a>
+    <a href="#"><span>·&nbsp;&nbsp;永昌硅业喜获保山市政府质量管理奖</span><em>2018-04-08</em></a>
+   </dd>
+  </dl>
+ </div>
+ <div class="bank_04_3">
+  <dl>
+   <dt><span>专题研究</span></dt>
+   <div><a href="#"><img src="/static/images/img_04.jpg" width="119" height="97" alt="新闻名称"></a></div>
+   <dd>
+    <a href="#">·&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+    <a href="#">·&nbsp;永昌硅业喜获保山市政府质量管理奖</a>
+   </dd>
+  </dl>
+ </div>
+
+</div>
+
+
+<script type="text/javascript">
+ $(function(){
+  var Map = document.getElementById("Map");
+  var Mapli = Map.getElementsByTagName("area");
+  var oUI = document.getElementById("Map2");
+  var aUI = oUI.getElementsByTagName("ul");
+  function CF(){
+   for(var i=0;i<aUI.length;i++){
+    aUI[i].style.display = "none";
+   }
+  };
+  CF();
+  $(aUI[0]).css("display","block");
+  $(Mapli).mouseover(function(){
+   var id = this.dataset.appid;
+   CF();
+   $(aUI[id]).css("display","block");
+   $(Mapli[id]).css("background","#000000");
+  })
+ })
+</script>
+
+<div class="bank_05">
+ <div class="bank_05_z">
+  <dl>
+   <dt>
+    <span>园区风采</span>
+   </dt>
+   <dd>
+    <div class="roll-wrap roll_col h517" id="d">
+     <ul class="roll__list" style="position: absolute; left: 0; top: 0;">
+     <a href="#"><li><Img src="/static/images/img_07.jpg" width="119" height="97"><span><strong>昆明高新技术产业开发区1</strong><br>云南文山三七药物产业园区是国家审核通过的省级重点工业园区，是云南省人民政府打造..</span></li></a>
+     <a href="#"><li><Img src="/static/images/img_07.jpg" width="119" height="97"><span><strong>昆明高新技术产业开发区2</strong><br>云南文山三七药物产业园区是国家审核通过的省级重点工业园区，是云南省人民政府打造..</span></li></a>
+     <a href="#"><li><Img src="/static/images/img_07.jpg" width="119" height="97"><span><strong>昆明高新技术产业开发区3</strong><br>云南文山三七药物产业园区是国家审核通过的省级重点工业园区，是云南省人民政府打造..</span></li></a>
+     <a href="#"><li><Img src="/static/images/img_07.jpg" width="119" height="97"><span><strong>昆明高新技术产业开发区4</strong><br>云南文山三七药物产业园区是国家审核通过的省级重点工业园区，是云南省人民政府打造..</span></li></a>
+     <a href="#"><li><Img src="/static/images/img_07.jpg" width="119" height="97"><span><strong>昆明高新技术产业开发区5</strong><br>云南文山三七药物产业园区是国家审核通过的省级重点工业园区，是云南省人民政府打造..</span></li></a>
+     <a href="#"><li><Img src="/static/images/img_07.jpg" width="119" height="97"><span><strong>昆明高新技术产业开发区6</strong><br>云南文山三七药物产业园区是国家审核通过的省级重点工业园区，是云南省人民政府打造..</span></li></a>
+     <a href="#"><li><Img src="/static/images/img_07.jpg" width="119" height="97"><span><strong>昆明高新技术产业开发区7</strong><br>云南文山三七药物产业园区是国家审核通过的省级重点工业园区，是云南省人民政府打造..</span></li></a>
+     <a href="#"><li><Img src="/static/images/img_07.jpg" width="119" height="97"><span><strong>昆明高新技术产业开发区8</strong><br>云南文山三七药物产业园区是国家审核通过的省级重点工业园区，是云南省人民政府打造..</span></li></a>
+     </ul>
+     <a class="control pre" href="javascript:;">&lt;</a>
+     <a class="control next" href="javascript:;">&gt;</a>
+    </div>
+   </dd>
+  </dl>
+ </div>
+ <div class="bank_05_y">
+   <div class="bank_05_y_t"><span>云南工业园区导航</span><em>截至目前，云南省工业园区协会，入驻共有<strong> 1235 </strong>家！</em>
+    <ul>
+     <li id="tow31" onClick="setTab('tow3',1,4)" class="hover">全部园区</li>
+     <li id="tow32" onClick="setTab('tow3',2,4)" >国家级</li>
+     <li id="tow33" onClick="setTab('tow3',3,4)" >省级</li>
+     <li id="tow34" onClick="setTab('tow3',4,4)" >市州级</li>
+    </ul>
+    </div>
+    <div id="con_tow3_1">
+       <div class="map">
+    <img border="0" usemap="#Map" src="/static/images/ditu_img.png">
+    <map name="Map" id="Map">
+     <area data-appid="0" alt="昆明" coords="296,210,345,239" shape="rect" target="_blank"  href="#">
+     <area data-appid="1" alt="文山" coords="394,325,443,354" shape="rect" target="_blank"  href="#">
+     <area data-appid="2" alt="红河" coords="303,354,352,383" shape="rect" target="_blank"  href="#">
+     <area data-appid="3" alt="西双版纳" coords="179,432,247,461" shape="rect" target="_blank"  href="#">
+     <area data-appid="4" alt="普洱" coords="187,352,236,381" shape="rect" target="_blank" href="#">
+     <area data-appid="5" alt="玉溪" coords="270,299,319,328" shape="rect" target="_blank"  href="#">
+     <area data-appid="6" alt="曲靖" coords="351,215,400,244" shape="rect" target="_blank"  href="#">
+     <area data-appid="7" alt="昭通" coords="353,81,402,110" shape="rect" target="_blank"  href="#">
+     <area data-appid="8" alt="迪庆" coords="116,72,165,101" shape="rect" target="_blank"  href="#">
+     <area data-appid="9" alt="丽江" coords="179,131,228,160" shape="rect" target="_blank"  href="#">
+     <area data-appid="10" alt="怒江" coords="95,145,144,174" shape="rect" target="_blank"  href="#">
+     <area data-appid="11" alt="临沧" coords="118,317,167,346" shape="rect" target="_blank"  href="#">
+     <area data-appid="12" alt="德宏" coords="31,273,80,302" shape="rect" target="_blank"  href="#">
+     <area data-appid="13" alt="保山" coords="87,250,136,279" shape="rect" target="_blank" href="#">
+     <area data-appid="14" alt="大理" coords="143,199,192,228" shape="rect" target="_blank" href="#">
+     <area data-appid="15" alt="楚雄" coords="233,226,282,255" shape="rect" target="_blank" href="#">
+    </map>
+   </div>
+   <div id="Map2">
+    <ul><div>昆明</div><li><a href="#">昆明高新技术产业开发区1</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>文山</div><li><a href="#">昆明高新技术产业开发区2</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>红河</div><li><a href="#">昆明高新技术产业开发区3</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>西双版纳</div><li><a href="#">昆明高新技术产业开发区4</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>普洱</div><li><a href="#">昆明高新技术产业开发区5</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>玉溪</div><li><a href="#">昆明高新技术产业开发区6</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>曲靖</div><li><a href="#">昆明高新技术产业开发区7</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>昭通</div><li><a href="#">昆明高新技术产业开发区8</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>迪庆</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>丽江</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>怒江</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>临沧</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>德宏</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>保山</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>大理</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>楚雄</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+   </div>
+    </div>
+    <div id="con_tow3_2" style="display:none;">
+       <div class="map">
+    <img border="0" usemap="#Map" src="/static/images/ditu_img.png">
+    <map name="Map" id="Map">
+     <area data-appid="0" alt="昆明" coords="296,210,345,239" shape="rect" target="_blank"  href="#">
+     <area data-appid="1" alt="文山" coords="394,325,443,354" shape="rect" target="_blank"  href="#">
+     <area data-appid="2" alt="红河" coords="303,354,352,383" shape="rect" target="_blank"  href="#">
+     <area data-appid="3" alt="西双版纳" coords="179,432,247,461" shape="rect" target="_blank"  href="#">
+     <area data-appid="4" alt="普洱" coords="187,352,236,381" shape="rect" target="_blank" href="#">
+     <area data-appid="5" alt="玉溪" coords="270,299,319,328" shape="rect" target="_blank"  href="#">
+     <area data-appid="6" alt="曲靖" coords="351,215,400,244" shape="rect" target="_blank"  href="#">
+     <area data-appid="7" alt="昭通" coords="353,81,402,110" shape="rect" target="_blank"  href="#">
+     <area data-appid="8" alt="迪庆" coords="116,72,165,101" shape="rect" target="_blank"  href="#">
+     <area data-appid="9" alt="丽江" coords="179,131,228,160" shape="rect" target="_blank"  href="#">
+     <area data-appid="10" alt="怒江" coords="95,145,144,174" shape="rect" target="_blank"  href="#">
+     <area data-appid="11" alt="临沧" coords="118,317,167,346" shape="rect" target="_blank"  href="#">
+     <area data-appid="12" alt="德宏" coords="31,273,80,302" shape="rect" target="_blank"  href="#">
+     <area data-appid="13" alt="保山" coords="87,250,136,279" shape="rect" target="_blank" href="#">
+     <area data-appid="14" alt="大理" coords="143,199,192,228" shape="rect" target="_blank" href="#">
+     <area data-appid="15" alt="楚雄" coords="233,226,282,255" shape="rect" target="_blank" href="#">
+    </map>
+   </div>
+   <div id="Map2">
+    <ul><div>昆明</div><li><a href="#">昆明高新技术产业开发区2</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>文山</div><li><a href="#">昆明高新技术产业开发区2</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>红河</div><li><a href="#">昆明高新技术产业开发区3</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>西双版纳</div><li><a href="#">昆明高新技术产业开发区4</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>普洱</div><li><a href="#">昆明高新技术产业开发区5</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>玉溪</div><li><a href="#">昆明高新技术产业开发区6</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>曲靖</div><li><a href="#">昆明高新技术产业开发区7</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>昭通</div><li><a href="#">昆明高新技术产业开发区8</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>迪庆</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>丽江</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>怒江</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>临沧</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>德宏</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>保山</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>大理</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>楚雄</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+   </div>
+    </div>
+    <div id="con_tow3_3" style="display:none;">
+       <div class="map">
+    <img border="0" usemap="#Map" src="/static/images/ditu_img.png">
+    <map name="Map" id="Map">
+     <area data-appid="0" alt="昆明" coords="296,210,345,239" shape="rect" target="_blank"  href="#">
+     <area data-appid="1" alt="文山" coords="394,325,443,354" shape="rect" target="_blank"  href="#">
+     <area data-appid="2" alt="红河" coords="303,354,352,383" shape="rect" target="_blank"  href="#">
+     <area data-appid="3" alt="西双版纳" coords="179,432,247,461" shape="rect" target="_blank"  href="#">
+     <area data-appid="4" alt="普洱" coords="187,352,236,381" shape="rect" target="_blank" href="#">
+     <area data-appid="5" alt="玉溪" coords="270,299,319,328" shape="rect" target="_blank"  href="#">
+     <area data-appid="6" alt="曲靖" coords="351,215,400,244" shape="rect" target="_blank"  href="#">
+     <area data-appid="7" alt="昭通" coords="353,81,402,110" shape="rect" target="_blank"  href="#">
+     <area data-appid="8" alt="迪庆" coords="116,72,165,101" shape="rect" target="_blank"  href="#">
+     <area data-appid="9" alt="丽江" coords="179,131,228,160" shape="rect" target="_blank"  href="#">
+     <area data-appid="10" alt="怒江" coords="95,145,144,174" shape="rect" target="_blank"  href="#">
+     <area data-appid="11" alt="临沧" coords="118,317,167,346" shape="rect" target="_blank"  href="#">
+     <area data-appid="12" alt="德宏" coords="31,273,80,302" shape="rect" target="_blank"  href="#">
+     <area data-appid="13" alt="保山" coords="87,250,136,279" shape="rect" target="_blank" href="#">
+     <area data-appid="14" alt="大理" coords="143,199,192,228" shape="rect" target="_blank" href="#">
+     <area data-appid="15" alt="楚雄" coords="233,226,282,255" shape="rect" target="_blank" href="#">
+    </map>
+   </div>
+   <div id="Map2">
+    <ul><div>昆明</div><li><a href="#">昆明高新技术产业开发区3</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>文山</div><li><a href="#">昆明高新技术产业开发区2</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>红河</div><li><a href="#">昆明高新技术产业开发区3</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>西双版纳</div><li><a href="#">昆明高新技术产业开发区4</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>普洱</div><li><a href="#">昆明高新技术产业开发区5</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>玉溪</div><li><a href="#">昆明高新技术产业开发区6</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>曲靖</div><li><a href="#">昆明高新技术产业开发区7</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>昭通</div><li><a href="#">昆明高新技术产业开发区8</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>迪庆</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>丽江</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>怒江</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>临沧</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>德宏</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>保山</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>大理</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>楚雄</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+   </div>
+    </div>
+    <div id="con_tow3_4" style="display:none;">
+       <div class="map">
+    <img border="0" usemap="#Map" src="/static/images/ditu_img.png">
+    <map name="Map" id="Map">
+     <area data-appid="0" alt="昆明" coords="296,210,345,239" shape="rect" target="_blank"  href="#">
+     <area data-appid="1" alt="文山" coords="394,325,443,354" shape="rect" target="_blank"  href="#">
+     <area data-appid="2" alt="红河" coords="303,354,352,383" shape="rect" target="_blank"  href="#">
+     <area data-appid="3" alt="西双版纳" coords="179,432,247,461" shape="rect" target="_blank"  href="#">
+     <area data-appid="4" alt="普洱" coords="187,352,236,381" shape="rect" target="_blank" href="#">
+     <area data-appid="5" alt="玉溪" coords="270,299,319,328" shape="rect" target="_blank"  href="#">
+     <area data-appid="6" alt="曲靖" coords="351,215,400,244" shape="rect" target="_blank"  href="#">
+     <area data-appid="7" alt="昭通" coords="353,81,402,110" shape="rect" target="_blank"  href="#">
+     <area data-appid="8" alt="迪庆" coords="116,72,165,101" shape="rect" target="_blank"  href="#">
+     <area data-appid="9" alt="丽江" coords="179,131,228,160" shape="rect" target="_blank"  href="#">
+     <area data-appid="10" alt="怒江" coords="95,145,144,174" shape="rect" target="_blank"  href="#">
+     <area data-appid="11" alt="临沧" coords="118,317,167,346" shape="rect" target="_blank"  href="#">
+     <area data-appid="12" alt="德宏" coords="31,273,80,302" shape="rect" target="_blank"  href="#">
+     <area data-appid="13" alt="保山" coords="87,250,136,279" shape="rect" target="_blank" href="#">
+     <area data-appid="14" alt="大理" coords="143,199,192,228" shape="rect" target="_blank" href="#">
+     <area data-appid="15" alt="楚雄" coords="233,226,282,255" shape="rect" target="_blank" href="#">
+    </map>
+   </div>
+   <div id="Map2">
+    <ul><div>昆明</div><li><a href="#">昆明高新技术产业开发4444</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>文山</div><li><a href="#">昆明高新技术产业开发区2</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>红河</div><li><a href="#">昆明高新技术产业开发区3</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>西双版纳</div><li><a href="#">昆明高新技术产业开发区4</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>普洱</div><li><a href="#">昆明高新技术产业开发区5</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>玉溪</div><li><a href="#">昆明高新技术产业开发区6</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>曲靖</div><li><a href="#">昆明高新技术产业开发区7</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>昭通</div><li><a href="#">昆明高新技术产业开发区8</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>迪庆</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>丽江</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>怒江</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>临沧</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>德宏</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>保山</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>大理</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+    <ul><div>楚雄</div><li><a href="#">昆明高新技术产业开发区9</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li><li><a href="#">昆明高新技术产业开发区</a><i></i></li></ul>
+   </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="bank_06">
+ <div class="bank_06_1">
+  <dl>
+   <dt><span></span></dt>
+   <dd></dd>
+  </dl>
+ </div>
+ <div class="bank_06_2"></div>
+ <div class="bank_06_3"></div>
+</div>
+
+<div class="bank_yq">
+ <dl>
+  <dt><span>园区推荐</span></dt>
+  <dd>
+   <div class="roll-wrap roll_row" id="b">
+    <ul class="roll__list" style="position: absolute; left: 0; top: 0;">
+    <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX1</li></a>
+    <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX2</li></a>
+    <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX3</li></a>
+    <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX4</li></a>
+    <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX5</li></a>
+    <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX6</li></a>
+    <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX7</li></a>
+    <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX8</li></a>
+    <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX9</li></a>
+    <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX10</li></a>
+    <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX11</li></a>
+    <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX12</li></a>
+      </ul>
+      <a class="control pre" href="javascript:;">&lt;</a>
+      <a class="control next" href="javascript:;">&gt;</a>
+     </div>
+  </dd>
+ </dl>
+</div>
+
+<div class="bank_yq">
+ <dl>
+  <dt><span>合作伙伴</span></dt>
+  <dd>
+   <div class="roll-wrap roll_row" id="b2">
+    <ul class="roll__list" style="position: absolute; left: 0; top: 0;">
+     <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX1</li></a>
+     <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX2</li></a>
+     <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX3</li></a>
+     <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX4</li></a>
+     <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX5</li></a>
+     <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX6</li></a>
+     <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX7</li></a>
+     <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX8</li></a>
+     <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX9</li></a>
+     <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX10</li></a>
+     <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX11</li></a>
+     <a href="#"><li><img src="/static/images/img_logo08.jpg" width="77" height="77" alt="名称"><br>园区名称XX12</li></a>
+    </ul>
+    <a class="control pre" href="javascript:;">&lt;</a>
+    <a class="control next" href="javascript:;">&gt;</a>
+   </div>
+  </dd>
+ </dl>
+</div>
+
+<script src="/static/js/rollSlide.js"></script>
+<script>
+ $('#b').rollSlide({
+  orientation: 'left',
+  num: 2,
+  v: 1500,
+  space: 1000,
+  isRoll: true
+ });
+ $('#b2').rollSlide({
+  orientation: 'left',
+  num: 2,
+  v: 1500,
+  space: 1000,
+  isRoll: true
+ });
+ $('#d').rollSlide({
+  orientation: 'bottom',
+  num: 3,
+  v: 1500,
+  space: 1000,
+  isRoll: true
+ });
+ $('#d2').rollSlide({
+  orientation: 'bottom',
+  num: 1,
+  v: 1500,
+  space: 1000,
+  isRoll: true
+ });
+
+
+</script>
+
+
+{% endblock %}

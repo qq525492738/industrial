@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block extrahead %}
+{% endblock %}
+{% block content %}
+
+
+    <div class="top_2"></div>
+
+    <div class="zym_fl">
+        <dl>
+            <dt><span>园区地区</span></dt>
+
+            <dd><a href="./?category={{ addr.category }}" class="hover">全部</a>
+                {% for item in  region_list %}
+                    <a href="./?region={{ item.name }}&category={{ addr.category }}">{{ item.name }}</a>
+                {% endfor %}
+            </dd>
+        </dl>
+        <dl>
+            <dt><span>园区类型</span></dt>
+            <dd><a href="./?regoin={{ addr.region }}" class="hover">全部</a>
+
+                {% for item in  category_list %}
+                    <a href="./?region={{ addr.region }}&category={{ item.name }}">{{ item.name }}</a>
+                {% endfor %}
+            </dd>
+        </dl>
+        <div class="zym_soso">
+            <form action="{% url 'parks' %}">
+                <input type="text" name='q' class="top_ssz1" value="请搜索"><input type="submit" value="" class="top_ssz2">
+            </form>
+        </div>
+    </div>
+    <div class="zym_xian"></div>
+
+    <div class="zym_yq">
+        <dl>
+            <dt>截至目前，{{ addr.region }}{{ addr.category }}工业园区协会，入驻共有<em> {{ count }} </em>家！</dt>
+            <dd>
+                <ul>
+                    {% for park in object_list.object_list %}
+                        <a href="{% url 'park_detail' park.id %}">
+                            <li>
+                                <img src="{{ park.logo.url }}" width="75" height="75" alt="logo">
+                                <div>
+                                    {% if park.category.name == '国家级' %}
+                                        <strong><h3>{{ park.name }}<i class="yq_a1">国家级</i></h3><br>
+                                    {% elif park.category.name == '省级' %}
+                                        <strong><h3>{{ park.name }}<i class="yq_a2">省级</i></h3><br>
+                                    {% elif park.category.name == '州市级' %}
+                                        <strong><h3>{{ park.title }}<i class="yq_a3">州市级</i></h3><br>
+                                    {% endif %}
+                                    <em>{{ park.name }}</em>
+                                    </strong>
+                                    <span>
+                                        地址：{{ park.category.name|default_if_none:"" }}<br>
+                                        电话：{{ park.phone|default_if_none:"没有" }} 邮编：{{ park.zip_code|default_if_none:"没有" }} <br>
+                                        邮箱：{{ park.email|default_if_none:"没有" }} 传真：{{ park.fax|default_if_none:"没有" }}<br>
+                                        网址：{{ park.web_url|default_if_none:"没有" }}
+                                    </span>
+                                </div>
+                            </li>
+                        </a>
+
+                    {% endfor %}
+
+
+                </ul>
+            </dd>
+        </dl>
+
+        {# 上一页 #}
+        {% if object_list.has_previous %}
+            <div class="zym_fy" tabindex="-1"><a href="/park/?category={{ addr.category }}&region={{ addr.region }}&page={{ object_list.previous_page_number }}&q={{ addr.q }}">上一页</a></div>
+        {% else %}
+            <div class="zym_fy" tabindex="-1">上一页</div>
+        {% endif %}
+
+        {# 所有页 #}
+        {% for  number in page_range %}
+            <div class="zym_fy"><a href="/park/?category={{ addr.category }}&region={{ addr.region }}&page={{ number }}&q={{ addr.q }}">{{ number }}</a></div>
+        {% endfor %}
+        {# 下一页 #}
+        {% if object_list.has_next %}
+            <div class="zym_fy"><a href="/park/?category={{ addr.category }}&region={{ addr.region }}&page={{ object_list.next_page_number }}&q={{ addr.q }}">下一页</a></div>
+        {% else %}
+            <div class="zym_fy">下一页</div>
+
+        {% endif %}
+       {# above 分页 #}
+
+    </div>
+
+    <div class="zym_xian"></div>
+
+
+
+{% endblock %}

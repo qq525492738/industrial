@@ -1,0 +1,47 @@
+
+{% extends 'base.html' %}
+{% block extrahead %}
+{% endblock %}
+
+{% block content %}
+
+
+<div class="top_2"></div>
+
+<div class="zym_news">
+ <div class="zym_news_z">
+  <dl>
+    <dt><a href="/">云南省工业园区协会</a>{%  if articles_category_name %}&nbsp;&gt;&nbsp;<a href="/article?category_name={{ articles_category.0.name }}">{{ articles_category_name }}</a>{% endif %}</dt>
+
+   <dd>
+    <ul>
+    {% for article in articles %}
+        <a href="{% url 'article' article.id %}"><li><span><i></i>{{ article.title }}</span> <em>{{ article.create_time|date:"Y-m-d" }}</em></li></a>
+    {% endfor %}
+    </ul>
+    <div class="zym_fy">分页</div>
+   </dd>
+  </dl>
+ </div>
+ <div class="zym_news_y">
+  <dl>
+   <dt><span>热门资讯</span></dt>
+      {% for hot_information in hot_information_list %}
+        <a href="{% url 'article' hot_information.id %}"><dd>{{ hot_information.title }}</dd></a>
+      {% endfor %}
+  </dl>
+  <dl>
+   <dt><span>专题</span></dt>
+      {% for related in related_list %}
+        <a href="{% url 'article' related.id %}"><dd>{{ related.title }}</dd></a>
+      {% endfor %}
+  </dl>
+  <div><a href="#"><img src="/static/images/zym_cf_gg1.jpg"></a></div>
+ </div>
+</div>
+
+ 
+<div class="zym_xian"></div>
+
+
+{% endblock %}

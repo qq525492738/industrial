@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=8,chrome=1">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/static/js/xuanxiangka.js"></script>
+    {% block extrahead %}{% endblock %}
+    <title>云南工业园区</title>
+
+</head>
+
+<body>
+<div class="top" style="background:#0d1533;">
+    <div class="top_z"><a href="/"><img src="/static/images/logo.png" width="277" height="100" alt="云南省工业园区协会logo"></a>
+    </div>
+    <div class="top_y">
+        <div class="top_y1">
+            <dl>
+                <dt>
+                    <form method="get" action="/search">
+                        <input type="text" class="top_ss1" name="q">
+                        <input type="submit" value="" class="top_ss2">
+                    </form>
+                </dt>
+                <dd><a href="#">民企入滇综合服务平台</a>&nbsp;&nbsp;<a href="/park/factory">标准厂房</a>&nbsp;&nbsp;<a href="#">客服</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="top_y2">
+            <ul>
+                <a href="/article?category_name=资讯中心">
+                    <li>资讯中心</li>
+                </a>
+                <a href="/article?category_name=政策法规">
+                    <li>政策法规</li>
+                </a>
+                <a href="{% url 'parks' %}">
+                    <li>园区快搜</li>
+                </a>
+                <a href="{% url 'investment' %}">
+                    <li>招商引资</li>
+                </a>
+                <a href="{% url 'factory' %}">
+                    <li>标准厂房</li>
+                </a>
+            </ul>
+            <a href="/">
+                <div>云南工业园区</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% block content %}
+{% endblock %}
+
+
+<div class="wei">
+    <div class="wei_n">
+        <div class="wei_01">
+            <div class="wei_01z">
+                <dl>
+                    <dt>关于协会</dt>
+                    <dd><a href="/article?category_name=协会简介">01 协会简介</a><a href="/article?category_name=协会章程">02
+                        协会章程</a><a href="/article?category_name=业务范围">03 业务范围</a><a href="/article?category_name=入会申请">04
+                        入会申请</a><a
+                            href="/article?category_name=联系协会">05 联系协会</a></dd>
+                </dl>
+            </div>
+            <div class="wei_01y">
+                <dl>
+                    <dt>
+                        <ul>
+                            <li id="tow41" onClick="setTab('tow4',1,4)" class="hover">友情链接</li>
+                            <li id="tow42" onClick="setTab('tow4',2,4)">政府机关</li>
+                            <li id="tow43" onClick="setTab('tow4',3,4)">行业协会</li>
+                            <li id="tow44" onClick="setTab('tow4',4,4)">其他</li>
+                        </ul>
+                    </dt>
+                    <dd id="con_tow4_1"><a href="#">中国高新区协会 | </a><a href="#">中国高新区协会 | </a><a href="#">中国高新区协会 | </a><a
+                            href="#">中国高新区协会 | </a><a href="#">中国高新区协会 | </a><a href="#">中国高新区协会 | </a><a href="#">中国高新区协会
+                        | </a><a href="#">中国高新区协会 | </a><a href="#">中国高新区协会 | </a><a href="#">中国高新区协会 | </a><a href="#">中国高新区协会
+                        | </a></dd>
+                    <dd id="con_tow4_2" style="display:none;"><a href="#">中国高新区协2会 | </a><a href="#">中国高新区协会 | </a><a
+                            href="#">中国高新区协会 | </a><a href="#">中国高新区协会 | </a><a href="#">中国高新区协会 | </a><a href="#">中国高新区协会
+                        | </a></dd>
+                    <dd id="con_tow4_3" style="display:none;"><a href="#">中国高新区协3会 | </a><a href="#">中国高新区协会 | </a><a
+                            href="#">中国高新区协会 | </a><a href="#">中国高新区协会 | </a><a href="#">中国高新区协会 | </a><a href="#">中国高新区协会
+                        | </a></dd>
+                    <dd id="con_tow4_4" style="display:none;"><a href="#">中国高新区协4会 | </a><a href="#">中国高新区协会 | </a><a
+                            href="#">中国高新区协会 | </a><a href="#">中国高新区协会 | </a><a href="#">中国高新区协会 | </a><a href="#">中国高新区协会
+                        | </a></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="wei_02">
+            <a href="#">云南省开发区协会</a> | <a href="#">中国开发区网</a> | 网站徽标 | 指导单位 | 网站服务 | 联系我们<br>
+            滇ICP备13007023号 <img src="/static/images/w_a3.jpg"> 滇公网安备 11010102002114号<br>
+            主办单位：中国开发区协会 Copyright©2000-2014
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

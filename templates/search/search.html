@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="top_2"></div>
+
+    <div class="zym_news">
+        <div class="zym_news_z">
+
+
+            <dl>
+                <dt><a href="#">云南省工业园区协会</a>&nbsp;&gt;&nbsp;<a href="#">搜索结果</a></dt>
+                <dd>
+                    <ul>
+
+
+                        {% if query %}
+                            {% for result in page.object_list %}
+
+                                <a href="{% url 'article' result.object.id %} ">
+                                    <li><span><i></i>{{ result.object.title }}</span>
+                                        <em>{{ result.object.create_time|date:"Y-m-d" }}</em></li>
+                                </a>
+
+                            {% empty %}
+                                <p>没有找到相关的文章,请重试!</p>
+                            {% endfor %}
+
+
+
+
+                            {% if page.has_previous or page.has_next %}
+                                <div>
+                                    {% if page.has_previous %}
+                                        <a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo;
+                                    Previous{% if page.has_previous %}</a>{% endif %}
+                                    |
+                                    {% if page.has_next %}
+                                        <a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Next
+                                    &raquo;{% if page.has_next %}</a>{% endif %}
+                                </div>
+                            {% endif %}
+                        {% else %}
+                            {# Show some example queries to run, maybe query syntax, something else? #}
+                        {% endif %}
+
+
+                        {% for article in articles %}
+
+                        {% endfor %}
+
+
+                    </ul>
+                    <div class="zym_fy">分页</div>
+                </dd>
+            </dl>
+        </div>
+        <div class="zym_news_y">
+            <dl>
+                <dt><span>热门资讯</span></dt>
+                {% for hot_information in hot_information_list %}
+                    <a href="{% url 'article' hot_information.id %}">
+                        <dd>{{ hot_information.title }}</dd>
+                    </a>
+                {% endfor %}
+            </dl>
+            <dl>
+                <dt><span>专题</span></dt>
+                {% for related in related_list %}
+                    <a href="{% url 'article' related.id %}">
+                        <dd>{{ related.title }}</dd>
+                    </a>
+                {% endfor %}
+            </dl>
+            <div><a href="#"><img src="/static/images/zym_cf_gg1.jpg"></a></div>
+        </div>
+    </div>
+
+
+    <div class="zym_xian"></div>
+
+
+
+
+{% endblock %}
