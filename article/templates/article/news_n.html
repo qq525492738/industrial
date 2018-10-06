@@ -20,7 +20,7 @@
                         {{ object.content|safe }}
                     </div>
                     <div class="zym_news_xyp">
-                        <a href="#">上一篇：xxxx</a><a href="#">下一篇：xxxx</a>
+                        <a href="{{ object.previous_article.get_absolute_url }}">上一篇：{{ object.previous_article.title }}</a><a href="{{ object.next_article.get_absolute_url }}">下一篇：{{ object.next_article.title }}</a>
                     </div>
                 </dd>
             </dl>

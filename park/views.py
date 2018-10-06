@@ -18,7 +18,7 @@ class ParkListView(ListView):
         if self.region:
             filter_data['category__classify__name'] = self.region
 
-        self.search = self.request.GET.get('q', False)
+        self.search = self.request.GET.get('q', '')
         args = ()
         if self.search:
             args = Q(name__contains=self.search) | Q(introduction__contains=self.search),
@@ -40,7 +40,7 @@ class ParkListView(ListView):
                      list(range(current_page_num, min(current_page_num + 2, self.paginator.num_pages)+1))
 
         if page_range[0] >= 3:
-            page_range.insert('...')
+            page_range.insert(0,'...')
         if page_range[-1] <= self.paginator.num_pages-3:
             page_range.append('...')
 
@@ -72,7 +72,7 @@ class InvestmentListView(ListView):
                 filter_data['area__range'] = (self.area_s, self.area_e)
             elif self.area_e == '0':
                 filter_data['area__gte'] = self.area_s
-        self.search = self.request.GET.get('q', False)
+        self.search = self.request.GET.get('q', '')
         args = ()
         if self.search:
             args = Q(name__contains=self.search) | Q(content__contains=self.search),
@@ -97,7 +97,7 @@ class InvestmentListView(ListView):
         page_range = list(range(max(current_page_num-2, 1), current_page_num)) + \
                      list(range(current_page_num, min(current_page_num + 2, self.paginator.num_pages)+1))
         if page_range[0] >= 3:
-            page_range.insert('...')
+            page_range.insert(0,'...')
         if page_range[-1] <= self.paginator.num_pages-3:
             page_range.append('...')
 
@@ -135,7 +135,7 @@ class FactoryListView(ListView):
             filter_data['intention'] = self.intention
         if self.category:
             filter_data['category'] = self.category
-        self.search = self.request.GET.get('q', False)
+        self.search = self.request.GET.get('q', '')
 
         args = ()
         if self.search:
