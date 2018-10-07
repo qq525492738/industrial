@@ -17,5 +17,6 @@ urlpatterns = [
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     path('search/', include('search.urls')),
     re_path(r'^haystack_search/', include('haystack.urls'), name='haystack_search'),
-    path('test', views.test, name='test')
+    path('test', views.test, name='test'),
+    path('t', views.TV.as_view(), name='t'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

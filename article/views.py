@@ -66,7 +66,7 @@ class ArticleListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['hot_information_list'] = models.Article.objects.filter(category__name="热门资讯")[:5]
+        context['hot_information_list'] = models.Article.objects.filter(category__name="资讯中心").order_by('visits')[:5]
         context['related_list'] = models.Article.objects.filter(category__name="专题")[:5]
         context['about_list'] = models.Article.objects.filter(category__name="关于协会")[:5]
         return context
@@ -91,6 +91,11 @@ class ArticleView(generic.DetailView):
         obj.viewed()
         return obj
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['hot_information_list'] = models.Article.objects.filter(category__name="资讯中心").order_by('visits')[:5]
+        context['special_list'] = models.Article.objects.filter(category__name="专题")[:5]
+        return context
 
 class CategoryListView(generic.ListView):
     template_name = 'article/news.html'

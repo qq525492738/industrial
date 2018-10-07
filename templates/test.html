@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for each in test %}
+    {% for each in each.category_set.all %}
+        {{ each.name }}
+        {% endfor %}
+{% endfor %}
+{{ test.category_set.all.0.name }}
+</body>
+</html>
